@@ -1,14 +1,10 @@
-const express = require('express')
-const app = express()
+var express = require('express')
+var app = express()
 
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
 
-// Endpoint to get all books
-app.get('/', (req, res) => {
-    // res.sendFile(__dirname + '/src/model/index.html');
-    res.send("hello world!")
-});
-
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
+app.listen(3000, function () {
+  console.log('Listening on port 3000...')
 })
