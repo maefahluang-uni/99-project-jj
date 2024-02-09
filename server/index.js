@@ -4,7 +4,8 @@ const app = express()
 
 // Endpoint to get all books
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/src/model/index.html');
+    // res.sendFile(__dirname + '/src/model/index.html');
+    res.send("hello world!")
 });
 
 const port = 3000;
